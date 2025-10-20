@@ -1,0 +1,68 @@
+/* ফন্ট এবং বেস স্টাইল */
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Bangla:wght@400;600;700&display=swap');
+body {
+    font-family: 'Tiro Bangla', serif;
+    background: linear-gradient(to right top, #f1e4ff, #e0e7ff);
+}
+
+/* কাস্টম স্লাইড নেভিগেশন স্টাইল */
+.slide-nav { -ms-overflow-style: none; scrollbar-width: none; }
+.slide-nav::-webkit-scrollbar { height: 0px; }
+
+#app-container { min-height: 100vh; display: flex; flex-direction: column; }
+.content-area { flex-grow: 1; }
+
+.student-row { cursor: pointer; transition: background-color 0.3s ease; }
+.student-row:hover { background-color: #faf5ff; }
+.student-card { transition: all 0.3s ease-in-out; }
+.student-card:hover { transform: translateY(-3px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+
+.expanded-content {
+    transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out, padding 0.4s ease-in-out;
+    overflow: hidden; max-height: 0; opacity: 0; padding-top: 0; padding-bottom: 0;
+}
+.expanded-content.active { max-height: 800px; opacity: 1; padding-top: 0.75rem; padding-bottom: 0.75rem; } /* Increased max-height */
+
+.modal-backdrop { background-color: rgba(0, 0, 0, 0.6); backdrop-filter: blur(4px); }
+#modal-content-wrapper { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+.modal-enter { opacity: 0; transform: scale(0.95) translateY(20px); }
+.modal-enter-active { opacity: 1; transform: scale(1) translateY(0); }
+
+@keyframes spin-custom { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+.animate-spin-custom { animation: spin-custom 1s linear infinite; }
+
+input[type="month"], select {
+    font-family: 'Inter', sans-serif; 
+    padding: 0.5rem 0.75rem; border-radius: 0.5rem;
+    border: 1px solid #c7d2fe; background-color: white;
+    transition: all 0.2s ease-in-out; cursor: pointer;
+}
+input[type="month"]:hover, select:hover { border-color: #818cf8; }
+
+#modal-container .max-h-\[70vh\] { max-height: 70vh; }
+#modal-container table thead { background-color: #f9fafb; }
+
+/* প্রিন্ট স্টাইল */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #print-area, #print-area * {
+        visibility: visible;
+    }
+    #print-area {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+    .print-slip {
+        page-break-inside: avoid;
+        page-break-after: always;
+        border: none !important;
+        box-shadow: none !important;
+    }
+    .no-print {
+        display: none !important;
+    }
+}

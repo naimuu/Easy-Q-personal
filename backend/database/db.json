@@ -1,0 +1,72 @@
+{
+  "students": [
+    {
+      "id": "501",
+      "name": "আবদুল্লাহ আল মামুন",
+      "classId": "class_5",
+      "fees": {
+        "monthly_2024_01": 500,
+        "monthly_2024_02": 500
+      }
+    },
+    {
+      "id": "502",
+      "name": "রিয়াদ হোসাইন",
+      "classId": "class_5",
+      "fees": {
+        "coaching_2024_05": 500
+      }
+    },
+    {
+      "id": "503",
+      "name": "তানভীর আহমেদ",
+      "classId": "class_5",
+      "fees": {
+        "monthly_2024_01": 500,
+        "monthly_2024_02": 500,
+        "monthly_2024_03": 500,
+        "monthly_2024_04": 500,
+        "monthly_2024_05": 500,
+        "exam_term_1_2024_03": 800,
+        "sports_2024_01": 200
+      }
+    },
+    {
+      "id": "401",
+      "name": "সাদিকুল ইসলাম",
+      "classId": "class_4",
+      "fees": {}
+    },
+    {
+      "id": "101",
+      "name": "আহমেদ জুবায়ের",
+      "classId": "class_1",
+      "fees": {
+        "monthly_2024_01": 350
+      }
+    }
+  ],
+  "management": {
+    "totalCollected": 10000,
+    "totalSubmittedToHeadmaster": 8000
+  },
+  "transactions": [
+    {
+      "id": "172938291034",
+      "date": "2025-10-19T12:00:00.000Z",
+      "studentId": "503",
+      "studentName": "তানভীর আহমেদ",
+      "amountReceived": 500,
+      "feeType": "মাসিক বেতন",
+      "feeKey": "monthly",
+      "allocationLog": [
+        {
+          "monthName": "মে ২০২৪",
+          "paid": 500,
+          "status": "পরিশোধিত",
+          "totalDue": 500
+        }
+      ]
+    }
+  ]
+}
